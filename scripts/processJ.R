@@ -1,0 +1,6 @@
+judgeRatings <- read.table("./data/judgeRatings.csv", header=T, quote="\"")
+library(ggplot2)
+attach(judgeRatings)
+qq <- qplot(CONT, RTEN)
+plot(qq)
+qq + geom_smooth(method='lm', formula=y~x)
